@@ -1,0 +1,656 @@
+
+body{
+	background-color: #333;
+}
+
+.header{
+	background-color: rgb(157, 85, 85);
+	padding: 15px;
+}
+
+.footer{
+	background-color: rgb(82, 30, 30);
+	padding: 15px;
+}
+
+.main{
+	padding: 30px;
+	text-align: left;
+
+}
+
+.wrapper{
+	position: relative;
+	overflow: hidden;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper > main {
+	flex-grow: 1;
+}
+
+.training__title span{
+	color: red;
+}
+
+
+.training__container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+
+.training__title {
+	font-size: 25px;
+	font-weight: 700;
+	color: white;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+/* FLEX контейнер  */
+.training__block {
+	border: 5px solid #c73a16;
+	background-color: #794f45;
+	display: flex;
+	margin-bottom: 100px;
+}
+
+/* FLEX елемент */
+.element{
+	color: aliceblue;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	background-color: rgb(181, 218, 136);
+	padding: 10px;
+	text-align: center;
+	border: 5px solid #77608d;
+}
+
+/* flex-direction: row-reverse */
+
+/* FLEX контейнер  */
+.direction-reverse {
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	height: 150px;
+	flex-direction: row-reverse;
+	animation: flex-direction 10s ease infinite alternate;
+}
+
+@keyframes flex-direction {
+
+	0%{
+		flex-direction: row-reverse;
+	}
+	
+	30%{
+		flex-direction: row;
+	}
+
+	50%{
+		flex-direction: column;
+	}
+
+	90%{
+		flex-direction: column-reverse;
+	}
+}
+
+.training__title--direction span{
+	position: relative;
+}
+
+.training__title--direction span::after{
+	content: "row-reverse";
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 300px;
+	height: 50px;
+	animation: name-direction 10s ease infinite alternate;
+}
+
+@keyframes name-direction {
+
+	0%{
+		content: "row-reverse";
+	}
+	
+	30%{
+		content: "row";
+	}
+
+	50%{
+		content: "column";
+	}
+
+	90%{
+		content: "column-reverse";
+	}
+}
+/* FLEX елемент */
+
+/* flex-direction: column */
+
+
+/* FLEX контейнер  */
+.direction-column {
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	height: 400px;
+	flex-direction: column;
+	animation: justify1 20s linear infinite;
+
+}
+
+@keyframes justify1 {
+	0% {
+		justify-content: flex-start;
+	}
+	20% {
+		justify-content: flex-end;
+	}
+	40% {
+		justify-content: center;
+	}
+	60% {
+		justify-content: space-around;
+	}
+	80% {
+		justify-content: space-between;
+	}
+	100% {
+		justify-content: space-evenly;
+	}
+}
+
+.training__title--column span{
+	position: relative;
+}
+
+.training__title--column span::after{
+	content: "flex-start";
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 300px;
+	height: 50px;
+	animation: content1 20s linear infinite;
+}
+
+@keyframes content1 {
+	0% {
+		content: "flex-start";
+	}
+	20% {
+		content: "flex-end";
+	}
+	40% {
+		content: "center";
+	}
+	60% {
+		content: "space-around";
+	}
+	80% {
+		content: "space-between";
+	}
+	100% {
+		content: "space-evenly";
+	}
+}
+
+
+
+/* FLEX контейнер  align-items */
+
+.direction-align {
+	align-items: stretch;
+	height: 250px;
+	flex-direction: column;
+	animation: align 20s linear infinite;
+
+}
+
+@keyframes align {
+	0% {
+		align-items: stretch;
+	}
+	25% {
+		align-items: flex-start;
+	}
+	50% {
+		align-items: center;
+	}
+	75% {
+		align-items: flex-end;
+	}
+	
+}
+
+.training__title--align span{
+	position: relative;
+}
+
+.training__title--align span::after{
+	content: "stretch";
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 300px;
+	height: 50px;
+	animation: name-align 20s linear infinite;
+}
+
+@keyframes name-align {
+	0% {
+		content: "stretch";
+	}
+	25% {
+		content: "flex-start";
+	}
+	50% {
+		content: "center";
+	}
+	75% {
+		content: "flex-end";
+	}
+}
+
+
+
+/* FLEX контейнер  align-self */
+
+.direction-self {
+	height: 150px;
+	flex-wrap: wrap;
+}
+
+
+.direction-self__item:nth-child(2){
+	flex: 0 1 auto;
+	animation: self 80s linear infinite, self-flex 20s linear infinite;
+}
+
+@keyframes self {
+	0% {
+		align-self: stretch;
+	}
+	25% {
+		align-self: flex-start;
+	}
+	50% {
+		align-self: center;
+	}
+	75% {
+		align-self: flex-end;
+	}
+}
+
+@keyframes self-flex {
+	0% {
+		flex: 0 1 auto;
+	}
+	25% {
+		flex: 1 1 auto;
+	}
+	50% {
+		flex: 1 0 auto;
+	}
+	75% {
+		flex: 0 1 500px;
+	}
+}
+
+.training__title--self .training__span1{
+	position: relative;
+	color: #333;
+}
+
+.training__title--self .training__span1::after{
+	content: "stretch";
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 300px;
+	height: 50px;
+	color: red;
+	animation: name-self 80s linear infinite;
+}
+
+@keyframes name-self {
+	0% {
+		content: "stretch";
+	}
+	25% {
+		content: "flex-start";
+	}
+	50% {
+		content: "center";
+	}
+	75% {
+		content: "flex-end";
+	}
+}
+
+.training__title--self .training__span2{
+	position: relative;
+	
+}
+
+.training__title--self .training__span2::after{
+	content: "0 1 auto";
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 300px;
+	height: 50px;
+	color: red;
+	animation: name-self2 20s linear infinite;
+}
+
+@keyframes name-self2 {
+	0% {
+		content: "0 1 auto";
+	}
+	25% {
+		content: "1 1 auto";
+	}
+	50% {
+		content: "1 0 auto";
+	}
+	75% {
+		content: "0 1 500px";
+	}
+}
+
+
+/* gap */
+
+.training__title--column-gap span {
+	position: relative;
+}
+
+
+.training__title--column-gap span::after {
+	content: "20px";
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 300px;
+	height: 50px;
+	animation: gap-column 20s linear infinite;
+}
+
+@keyframes gap-column {
+	0% {
+		content: "20px";
+	}
+	25% {
+		content: "30px";
+	}
+	50% {
+		content: "40px";
+	}
+	75% {
+		content: "50px";
+	}
+}
+
+.training__title--row span {
+	position: relative;
+}
+
+
+.training__title--row span::after {
+	content: "50px";
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 300px;
+	height: 50px;
+	animation: gap-row 20s linear infinite;
+}
+
+@keyframes gap-row {
+	0% {
+		content: "50px";
+	}
+	25% {
+		content: "40px";
+	}
+	50% {
+		content: "30px";
+	}
+	75% {
+		content: "20px";
+	}
+}
+
+.gap {
+
+	height: 200px;
+	column-gap: 20px;
+	row-gap: 50px;
+	animation: gap 20s linear infinite;
+	flex-direction: column;
+	align-items: stretch;
+	flex-wrap: wrap;
+
+}
+
+@keyframes gap {
+	0% {
+		column-gap: 20px;
+		row-gap: 50px;
+	}
+	25% {
+		column-gap: 30px;
+		row-gap: 40px;
+	}
+	50% {
+		column-gap: 40px;
+		row-gap: 30px;
+	}
+	75% {
+		column-gap: 50px;
+		row-gap: 20px;
+	}
+}
+
+/* лайф-хак по побудові колонок з відсотками */
+
+.training__row{
+	background-color: #794f45;
+	display: flex;
+	margin-bottom: 50px;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+	margin-bottom: 50px;
+}
+.training__column {
+	color: aliceblue;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	background-color: rgb(181, 218, 136);
+	padding: 10px;
+	text-align: center;
+	flex: 0 1 25%;
+	padding: 0 15px;
+}
+.training__item {
+	background-color: rgba(51, 30, 187, 0.639);
+}
+
+
+/* oreder */
+
+.order {
+	justify-content: center;
+	gap: 20px;
+}
+.order__item:nth-child(1) {
+	order: 3;
+}
+.order__item:nth-child(2) {
+	order: 4;
+}
+.order__item:nth-child(3) {
+	order: 2;
+}
+.order__item:nth-child(4) {
+	order: 1;
+}
+
+
+/* приклад з текстом з flex */
+
+.training__text-block {
+	margin-bottom: 100px;
+}
+.text-block {
+	color: red;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: 20px;
+}
+.text-block__title {
+	font-size: 26px;
+}
+.text-block__text {
+	color: white;
+	line-height: 120%;
+}
+.text-block__link {
+	font-size: 20px;
+	color: aqua;
+}
+
+
+/* Тренування з картками */
+
+.cards {
+	display: flex;
+	margin: 0px -15px;
+	border: none;
+	background-color: #333;
+
+}
+.cards__column{
+	flex: 0 1 33.333%;
+	padding: 0px 15px;
+}
+.cards__item {
+	min-height: 100%;
+	background-color: #666;
+	padding: 50px;
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.505);
+	
+}
+
+.item-card {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: flex-start;
+}
+
+.item-card__image{
+	margin-bottom: 15px;
+}
+.item-card__image img{
+	max-width: 100%;
+}
+.item-card__text {
+	color: white;
+	margin-bottom: 15px;
+	flex-grow: 1;
+}
+.item-card__button {
+	background-color: yellow;
+	padding: 5px;
+}
+
+.training__block--link {
+	margin-top: 50px;
+}
+
+/* Тренування з тестом та псевдоелементом */
+.link{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: rgb(255, 255, 5);
+	display: inline-flex;
+	align-items: center;
+	gap: 20px;
+}
+
+
+.link::before{
+	content: "";
+	flex: 0 0 20px;
+	width: 20px;
+	height: 20px;
+	background-color: black;
+}
+
+/* Відпрацювання прикладу з float */
+
+.training__float{
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin-bottom: 100px;
+}
+.img-text {
+	color: rgba(255, 255, 255, 0.683);
+	background-color: rgb(75, 30, 30);
+}
+.img-text__image {
+	width: 100px;
+	float: left;
+	margin-right: 20px;
+}
+
+.img-text__image2 {
+	width: 100px;
+	float: right;
+	margin-left: 20px;
+}
+
+.example {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.item-example {
+	display: flex;
+	gap: 20px;
+	background-color: #666;
+	padding: 15px;
+}
+
+.item-example:nth-child(even){
+	flex-direction: row-reverse;
+}
+
+.item-example__image {
+	flex: 0 0 100px;
+}
+
+.item-example__image img {
+	max-width: 100%;
+}
+
+.item-example__text {
+	color: white;
+	line-height: 120%;
+}

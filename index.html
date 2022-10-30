@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson_14</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			Я хедер
+		</header>
+		<main class="main">
+			<div class="training">
+				<div class="training__container">
+					<h2 class="training__title training__title--direction">flex-direction: <span></span></h2>
+					<!-- FLEX контейнер -->
+					<div class="training__block direction-reverse">
+						<!-- FLEX елемент -->
+						<div class="direction-reverse__item element">1</div>
+						<!-- FLEX елемент -->
+						<span class="direction-reverse__item element">2</span>
+						<!-- FLEX елемент -->
+						<div class="direction-reverse__item element">3</div>
+						<!-- FLEX елемент -->
+						<a class="direction-reverse__item element">4</a>
+					</div>
+					
+					<h2 class="training__title training__title--column">flex-direction: column + justify-content:  <span></span></h2>
+					<!-- FLEX контейнер -->
+					<div class="training__block direction-column">
+						<!-- FLEX елемент -->
+						<div class="direction-column__item element">1</div>
+						<!-- FLEX елемент -->
+						<span class="direction-column__item element">2</span>
+						<!-- FLEX елемент -->
+						<div class="direction-column__item element">3</div>
+						<!-- FLEX елемент -->
+						<a class="direction-column__item element">4</a>
+					</div>
+					
+
+					<h2 class="training__title training__title--align">flex-direction:column + align-items:  <span></span></h2>
+					<!-- FLEX контейнер -->
+					<div class="training__block direction-align">
+						<!-- FLEX елемент -->
+						<div class="direction-align__item element">1</div>
+						<!-- FLEX елемент -->
+						<span class="direction-align__item element">2</span>
+						<!-- FLEX елемент -->
+						<div class="direction-align__item element">3</div>
+						<!-- FLEX елемент -->
+						<a class="direction-align__item element">4</a>
+					</div>
+
+					<h2 class="training__title training__title--self">flex-direction:row + align-self:<span class="training__span1" >gggggggg</span>+ flex:<span class="training__span2" ></span></h2>
+					<!-- FLEX контейнер -->
+					<div class="training__block direction-self">
+						<!-- FLEX елемент -->
+						<div class="direction-self__item element">1</div>
+						<!-- FLEX елемент -->
+						<span class="direction-self__item element">2</span>
+						<!-- FLEX елемент -->
+						<div class="direction-self__item element">3</div>
+						<!-- FLEX елемент -->
+						<a class="direction-self__item element">4</a>
+					</div>
+					
+
+					<h2 class="training__title training__title--column-gap">column-gap: <span></span></h2>
+					<h2 class="training__title training__title--row">row-gap: <span></span></h2>
+					<!-- FLEX контейнер -->
+					<div class="training__block gap">
+						<!-- FLEX елемент -->
+						<div class="gap__item element">1</div>
+						<!-- FLEX елемент -->
+						<span class="gap__item element">2</span>
+						<!-- FLEX елемент -->
+						<div class="gap__item element">3</div>
+						<!-- FLEX елемент -->
+						<a class="gap__item element">4</a>
+					</div>
+					
+
+					<h2 class="training__title">Лайф-хак gap vs %</h2>
+					<!-- FLEX контейнер -->
+					<div class="training__row">
+						<!-- FLEX елемент -->
+						<div class="training__column ">
+							<!-- Контент -->
+							<div class="training__item">
+								Колонка №1
+							</div>
+						</div>
+						<!-- FLEX елемент -->
+						<div class="training__column ">
+							<!-- Контент -->
+							<div class="training__item">
+								Колонка №2
+							</div>
+						</div>
+						<!-- FLEX елемент -->
+						<div class="training__column ">
+							<!-- Контент -->
+							<div class="training__item">
+								Колонка №3
+							</div>
+						</div>
+						<!-- FLEX елемент -->
+						<div class="training__column">
+							<!-- Контент -->
+							<div class="training__item">
+								Колонка №4
+							</div>
+						</div>
+					</div>
+
+					<h2 class="training__title training__title--order">order:</h2>
+					<!-- FLEX контейнер -->
+					<div class="training__block order">
+						<!-- FLEX елемент -->
+						<div class="order__item element">1</div>
+						<!-- FLEX елемент -->
+						<span class="order__item element">2</span>
+						<!-- FLEX елемент -->
+						<div class="order__item element">3</div>
+						<!-- FLEX елемент -->
+						<a class="order__item element">4</a>
+					</div>
+
+					
+					<div class="training__text-block text-block">
+						<h1 class="text-block__title">Я заголовок</h1>
+						<div class="text-block__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quis quasi nam, eaque iusto iure sit. Incidunt dignissimos veritatis vitae aliquid iste quos alias architecto voluptatum distinctio ducimus, odio aliquam!
+						</div>
+						<a href="" class="text-block__link">Я посилання</a>
+					</div>
+
+					<div class="training__block cards">
+						<div class="cards__column">
+							<div class="cards__item item-card">
+								<div class="item-card__image">
+									<img src="img/image4.jpg" alt="">
+								</div>
+								<div class="item-card__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo tempore qui voluptatum similique
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo tempore qui voluptatum similique
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo tempore qui voluptatum similique
+								</div>
+								<a href="" class="item-card__button">Button</a>
+							</div>
+						</div>
+						<div class="cards__column">
+							<div class="cards__item item-card">
+								<div class="item-card__image">
+									<img src="img/image5.jpg" alt="">
+								</div>
+								<div class="item-card__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo tempore qui voluptatum similique
+								</div>
+								<a href="" class="item-card__button">Button</a>
+							</div>
+						</div>
+						<div class="cards__column">
+							<div class="cards__item item-card">
+								<div class="item-card__image">
+									<img src="img/image6.jpg" alt="">
+								</div>
+								<div class="item-card__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo tempore qui voluptatum similique temporibus sequi doloribus
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo tempore qui voluptatum similique temporibus sequi doloribus
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo tempore qui voluptatum similique temporibus sequi doloribus
+								</div>
+								<a href="" class="item-card__button">Button</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="training__block training__block--link">
+						<a href="" class="link">Я посилання</a>
+					</div>
+
+					<div class="training__float">
+						<div class="training__img-text img-text">
+							<img class="img-text__image" src="img/image4.jpg" alt="">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur officia corporis aliquid voluptas assumenda cumque illum a nam debitis. Molestias deleniti iste voluptatibus illo? Molestias iure reiciendis quo est in.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repudiandae ad enim laboriosam dolor reiciendis totam illum aspernatur consequuntur voluptatem atque mollitia repellendus, ex hic nesciunt. Accusantium illum ea dolorem.
+							Nostrum, eius facere eveniet delectus praesentium unde quia amet nulla ex exercitationem rerum, tenetur eaque tempora adipisci minus distinctio reiciendis libero odit. Facilis debitis beatae ipsum incidunt asperiores, commodi sapiente.
+						
+						</div>
+						<div class="training__img-text img-text">
+							<img class="img-text__image2" src="img/image5.jpg" alt="">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur officia corporis aliquid voluptas assumenda cumque illum a nam debitis. Molestias deleniti iste voluptatibus illo? Molestias iure reiciendis quo est in.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repudiandae ad enim laboriosam dolor reiciendis totam illum aspernatur consequuntur voluptatem atque mollitia repellendus, ex hic nesciunt. Accusantium illum ea dolorem.
+							Nostrum, eius facere eveniet delectus praesentium unde quia amet nulla ex exercitationem rerum, tenetur eaque tempora adipisci minus distinctio reiciendis libero odit. Facilis debitis beatae ipsum incidunt asperiores, commodi sapiente.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quam aliquid beatae ipsam sint ut exercitationem, fugit soluta debitis quae recusandae unde cum placeat tenetur assumenda adipisci natus, perferendis ab.
+						
+						</div>
+					</div>
+
+					<div class="training__block">
+						<div class="example">
+							<div class="example__item item-example">
+								<div class="item-example__image">
+									<img src="img/image4.jpg" alt="">
+								</div>
+								<div class="item-example__text">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil voluptates esse cupiditate labore facere odit doloremque quo repudiandae quasi, neque inventore sunt tempora similique soluta iure iusto earum vitae aliquam.
+								</div>
+							</div>
+							<div class="example__item item-example">
+								<div class="item-example__image">
+									<img src="img/image5.jpg" alt="">
+								</div>
+								<div class="item-example__text">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil voluptates esse cupiditate labore facere odit doloremque quo repudiandae quasi, neque inventore sunt tempora similique soluta iure iusto earum vitae aliquam.
+								</div>
+							</div>
+							<div class="example__item item-example">
+								<div class="item-example__image">
+									<img src="img/image6.jpg" alt="">
+								</div>
+								<div class="item-example__text">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil voluptates esse cupiditate labore facere odit doloremque quo repudiandae quasi, neque inventore sunt tempora similique soluta iure iusto earum vitae aliquam.
+								</div>
+							</div>
+							<div class="example__item item-example">
+								<div class="item-example__image">
+									<img src="img/image4.jpg" alt="">
+								</div>
+								<div class="item-example__text">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil voluptates esse cupiditate labore facere odit doloremque quo repudiandae quasi, neque inventore sunt tempora similique soluta iure iusto earum vitae aliquam.
+								</div>
+							</div>
+							<div class="example__item item-example">
+								<div class="item-example__image">
+									<img src="img/image6.jpg" alt="">
+								</div>
+								<div class="item-example__text">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil voluptates esse cupiditate labore facere odit doloremque quo repudiandae quasi, neque inventore sunt tempora similique soluta iure iusto earum vitae aliquam.
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			Я футер
+		</footer>
+	</div>
+	
+</body>
+</html>
